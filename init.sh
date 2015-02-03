@@ -16,12 +16,15 @@ if [ -e /opt/$MAVEN_PACKAGE ]; then
     echo "maven is installed"
 else
     echo "maven is NOT installed"
-    sudo mv $MAVEN_PACKAGE /opt/
+    sudo mv $MAVEN_PACKAGE /opt/maven
 fi
 
 # setting env variables
-cat << EOT >> $HOME/.bashrc
-export M3_HOME=/opt/apache-maven-$MAVEN_VERSION
+cat << 'EOT' >> $HOME/.bashrc
+export M3_HOME=/opt/maven
 export M3=$M3_HOME/bin
 export PATH=$M3:$PATH
 EOT
+
+# load .bashrc
+source $HOME/.bashrc
