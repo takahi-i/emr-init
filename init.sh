@@ -18,9 +18,8 @@ else
 fi
 
 # setting env variables
-cat $HOME/.bashrc <<EOF
-EOT
+cat << EOT >> $HOME/.bashrc
 export M3_HOME=/opt/apache-maven-$MAVEN_VERSION
 M3=$M3_HOME/bin
 export PATH=$M3:$PATH
-EOT  
+EOT     
