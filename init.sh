@@ -12,7 +12,7 @@ sudo yum install -y ant
 wget http://ftp.yz.yamagata-u.ac.jp/pub/network/apache/maven/maven-3/$MAVEN_VERSION/binaries/$MAVEN_PACKAGE-bin.tar.gz
 tar xvf $MAVEN_PACKAGE-bin.tar.gz
 
-if [ -e /opt/$MAVEN_PACKAGE ]; then
+if [ -e /opt/maven ]; then
     echo "maven is installed"
 else
     echo "maven is NOT installed"
