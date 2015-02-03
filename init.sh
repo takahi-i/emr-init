@@ -22,6 +22,6 @@ fi
 # setting env variables
 cat << EOT >> $HOME/.bashrc
 export M3_HOME=/opt/apache-maven-$MAVEN_VERSION
-M3=$M3_HOME/bin
+export M3=$M3_HOME/bin
 export PATH=$M3:$PATH
-EOT     
+EOT
